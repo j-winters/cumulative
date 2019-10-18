@@ -23,6 +23,9 @@ This performs a single simulation run which outputs the `.txt` specificed using 
 * `optimization`: Proportion with which agents choices are biased or stochastic. The default is `optimization=0.6` and corresponds to agents who only select the most optimized variant 60% of the time. 
 * `exploration`: 
 
+## References
+Winters, J. (2019). Escaping optimization traps: The role of cultural adaptation and cultural exaptation in facilitating open-ended cumulative dynamics. Palgrave Communications, XXXX.
+
 License
 -------
 
