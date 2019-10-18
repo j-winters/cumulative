@@ -22,3 +22,8 @@ This performs a single simulation run which outputs the `.txt` specificed using 
 * `trans_param`: Proportion with which agents receive a transmitted solution from another agent in the population. The default is `trans_param=1.0` and corresponds to agents who always receive a transmitted solution. When `trans_param=0.0`, agents never receive a transmitted solution.
 * `optimization`: Proportion with which agents choices are biased or stochastic. The default is `optimization=0.6` and corresponds to agents who only select the most optimized variant 60% of the time. 
 * `exploration`: 
+
+License
+-------
+
+Except where otherwise noted, this repository is licensed under a Creative Commons Attribution 4.0 license. You are free to share and adapt the material for any purpose, even commercially, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made. See LICENSE.md for full details.
