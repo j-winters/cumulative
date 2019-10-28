@@ -11,7 +11,7 @@ The top-level folder structure is as follows:
 ## Running the model
 The actual simulation runs reported in the paper were parallelized using the [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) package. Below is a simple version of the model for performing a single run:
 ```python
->>> import ABM_palgrave *
+>>> import ABM_winters *
 >>> simulation(n=100,generations=100,trans_param=1.0,optimization=0.6,exploration=0.2,directory='output.txt',run=0,out='False',pspace=[0.5,0.3,0.2])
 ```
 
