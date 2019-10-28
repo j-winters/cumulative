@@ -332,7 +332,7 @@ def simulation(n,generations,trans_param,optimization,exploration,directory,run,
 				if len(loc) == 2:
 					move_poss = np.random.choice(prob[loc],1,p=[0.75,0.25])
 				else:
-					move_poss = np.random.choice(prob[loc],1,p=psace)
+					move_poss = np.random.choice(prob[loc],1,p=pspace)
 				if move_poss == ['*']:
 					st_locs = [i for i in range(len(loc))]
 					val_loc = random.choice(st_locs)
