@@ -3,10 +3,10 @@ This repository contains data and code from Winters (2019). It includes the Pyth
 
 The top-level folder structure is as follows:
 
-* `model/`: The ABM used for generating the data. Requires Python 3 with [NumPy](https://numpy.org/), [NetworkX](https://networkx.github.io/) and [Editdistance](https://github.com/aflc/editdistance) packages installed.
-* `data/`:  All data generated for Winters (2019) in `.csv` formats.
 * `analysis/`: Contains R code for producing all graphs in the paper.
+* `data/`:  All data generated for Winters (2019) in `.csv` formats.
 * `manuscript/`: Pre-print pdf.
+* `model/`: The ABM used for generating the data. Requires Python 3 with [NumPy](https://numpy.org/), [NetworkX](https://networkx.github.io/) and [Editdistance](https://github.com/aflc/editdistance) packages installed.
 
 ## Running the model
 The actual simulation runs reported in the paper were parallelized using the [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) package. Below is a simple version of the model for performing a single run:
