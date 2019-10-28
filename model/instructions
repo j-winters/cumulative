@@ -1,3 +1,0 @@
-## Model folder
-* *runs.py* is used when running the model in a text interface (such as [Sublime Text](https://www.sublimetext.com/)).
-* *ABM_cumulative.py* is the main model.
