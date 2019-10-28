@@ -12,8 +12,7 @@ The top-level folder structure is as follows:
 There are two ways to run the model. The first is to run a simple model as follows:
 ```python
 >>> import ABM_palgrave *
->>> probs = {'00':['*','+'],'01':['*','+'],'10':['*','+'],'11':['*','+']}
->>> simulation(prob=probs,n=100,generations=100,invent_param=1.0,del_param=1.0,mod_param=1.0,trans_param=1.0,optimization=0.6,exploration=0.2,directory='output.txt',run=0,start_pos=2)
+>>> simulation(n=100,generations=100,invent_param=1.0,del_param=1.0,mod_param=1.0,trans_param=1.0,optimization=0.6,exploration=0.2,directory='output.txt',run=0)
 ```
 
 This performs a single simulation run which outputs the `.txt` specificed using the `directory` parameter. There are several parameters that can be manipulated and these are detailed below:
