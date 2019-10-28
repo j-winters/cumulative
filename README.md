@@ -4,7 +4,7 @@ This repository contains data and code from Winters (2019). It includes the Pyth
 The top-level folder structure is as follows:
 
 * `model/`: The ABM used for generating the data. Requires Python 3 with [NumPy](https://numpy.org/), [NetworkX](https://networkx.github.io/) and [Editdistance](https://github.com/aflc/editdistance) packages installed.
-* `data/`:  All data generated for Winters (2019) both in the raw `.txt` and curated `.csv` formats.
+* `data/`:  All data generated for Winters (2019) in `.csv` formats.
 * `analysis/`: Contains R code for producing all graphs in the paper.
 * `manuscript/`: Pre-print pdf.
 
