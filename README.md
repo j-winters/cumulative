@@ -6,7 +6,7 @@ The top-level folder structure is as follows:
 * `model/`: The ABM used for generating the data. Requires Python 3 with [NumPy](https://numpy.org/), [NetworkX](https://networkx.github.io/) and [Editdistance](https://github.com/aflc/editdistance) packages installed.
 * `data/`:  All data generated for Winters (2019) both in the raw `.txt` and curated `.csv` formats.
 * `analysis/`: Contains R code for producing all graphs in the paper.
-* `manuscript/`: LaTeX source and pre-print pdf.
+* `manuscript/`: Pre-print pdf.
 
 ## Running the model
 The actual simulation runs reported in the paper were parallelized using the [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) package. Below is a simple version of the model for performing a single run:
