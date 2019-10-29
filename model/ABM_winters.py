@@ -399,10 +399,11 @@ def simulation(n,generations,trans_param,optimization,exploration,directory,run,
 			p_len = np.sum(np.asarray(prob_str_out))/len(prob_str_out)
 			ent = np.sum(np.asarray(ent_out))/len(ent_out)
 			p_ent = np.sum(np.asarray(prob_ent_out))/len(prob_ent_out)
+			sol_complexity = ent * s_len
 
 			if out == True:
 				with open(directory,'a') as output:
-					output.write(str(run)+';'+str(gen)+';'+str(ts)+';'+str(pop_size)+';'+str(optimization)+';'+str(exploration)+';'+str(solu_pool)+';'+str(prob_pool)+';'+str(s_len)+';'+str(p_len)+';'+str(ent)+';'+str(p_ent)+';'+str(lev)+';'+str(lev_norm)+';'+str(prob_diversity)+';'+str(solu_diversity)+';'+str(len(ag_map))+';'+str(len(ag_edges))+';'+str(node_div)+';'+str(tra_freq)+';'+str(inv_freq)+';'+str(del_freq)+';'+str(mod_freq)+'\n')
+					output.write(str(run)+';'+str(gen)+';'+str(ts)+';'+str(pop_size)+';'+str(optimization)+';'+str(exploration)+';'+str(solu_pool)+';'+str(prob_pool)+';'+str(s_len)+';'+str(p_len)+';'+str(ent)+';'+str(p_ent)+';'+str(lev)+';'+str(lev_norm)+';'+str(prob_diversity)+';'+str(solu_diversity)+';'+str(len(ag_map))+';'+str(len(ag_edges))+';'+str(node_div)+';'+str(tra_freq)+';'+str(inv_freq)+';'+str(del_freq)+';'+str(mod_freq)+';'+str(sol_complexity)+'\n')
 			
 			else:
 				print('Gen:',gen)
