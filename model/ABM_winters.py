@@ -13,14 +13,6 @@ def entropy(string):
 	entropy = - sum([ p * math.log(p) / math.log(2.0) for p in prob ])
 	return entropy
 
-def var_ent(a):
-	length=a.size
-	aset=list(set(a))
-	asym=len(aset)
-	propab=[np.size(a[a==i])/(1.0*length) for i in aset]
-	ent=np.sum([p*np.log2(1.0/p) for p in propab])
-	return ent
-
 def edit_distance(s1, s2):
 	LD = editdistance.eval(s1, s2)
 	return LD
@@ -378,18 +370,10 @@ def simulation(n,generations,trans_param,optimization,exploration,directory,run,
 			ent_out = [entropy(i) for i in ag_soll]
 			prob_ent_out = [entropy(i) for i in pos_pr]
 			prob_str_out = list(set([len(i) for i in pos_pr]))
-			s_complex = np.asarray(ent_out)*np.asarray(len_out)
 			prob_len_out = [len(i) for i in pos_pr]
-			p_complex = np.asarray(prob_ent_out)*np.asarray(prob_len_out)
-			s_complex_mean = np.sum(s_complex)/len(s_complex)
-			p_complex_mean = np.sum(p_complex)/len(p_complex)
 			edit_LD = np.sum(np.asarray(edit_norm_out))/len(edit_norm_out)
 			average_complexity = np.sum(s_complex)/len(s_complex)
-			node_sol = [ag_map[i] for i in ag_map]
-			node_div = len(list(set([val for sublist in node_sol for val in sublist])))
-
-			prob_diversity = var_ent(np.asarray(pos_pr))
-			solu_diversity = var_ent(np.asarray(ag_soll))
+			
 			solu_pool = len(list(set(ag_soll)))
 			prob_pool = len(list(set(pos_pr)))
 			pop_size = len(agents)
@@ -403,7 +387,7 @@ def simulation(n,generations,trans_param,optimization,exploration,directory,run,
 
 			if out == True:
 				with open(directory,'a') as output:
-					output.write(str(run)+';'+str(gen)+';'+str(ts)+';'+str(pop_size)+';'+str(optimization)+';'+str(exploration)+';'+str(solu_pool)+';'+str(prob_pool)+';'+str(s_len)+';'+str(p_len)+';'+str(ent)+';'+str(p_ent)+';'+str(lev)+';'+str(lev_norm)+';'+str(prob_diversity)+';'+str(solu_diversity)+';'+str(len(ag_map))+';'+str(len(ag_edges))+';'+str(node_div)+';'+str(tra_freq)+';'+str(inv_freq)+';'+str(del_freq)+';'+str(mod_freq)+';'+str(sol_complexity)+'\n')
+					output.write(str(run)+';'+str(gen)+';'+str(ts)+';'+str(pop_size)+';'+str(optimization)+';'+str(exploration)+';'+str(solu_pool)+';'+str(prob_pool)+';'+str(s_len)+';'+str(p_len)+';'+str(ent)+';'+str(p_ent)+';'+str(lev)+';'+str(lev_norm)+';'+str(tra_freq)+';'+str(inv_freq)+';'+str(del_freq)+';'+str(mod_freq)+';'+str(sol_complexity)+'\n')
 			
 			else:
 				print('Gen:',gen)
