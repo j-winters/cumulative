@@ -372,7 +372,6 @@ def simulation(n,generations,trans_param,optimization,exploration,directory,run,
 			prob_str_out = list(set([len(i) for i in pos_pr]))
 			prob_len_out = [len(i) for i in pos_pr]
 			edit_LD = np.sum(np.asarray(edit_norm_out))/len(edit_norm_out)
-			average_complexity = np.sum(s_complex)/len(s_complex)
 			
 			solu_pool = len(list(set(ag_soll)))
 			prob_pool = len(list(set(pos_pr)))
