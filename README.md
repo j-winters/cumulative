@@ -1,5 +1,5 @@
 # cumulative
-This repository contains data and code from Winters (2019). It includes the Python code used for running the model, the data generated for Winters (2019), and the R code used to analyse this data.
+This repository contains data and code from [Winters (2019)](https://www.nature.com/articles/s41599-019-0361-3). It includes the Python code used for running the model, the data generated for Winters (2019), and the R code used to analyse this data.
 
 The top-level folder structure is as follows:
 
@@ -9,7 +9,7 @@ The top-level folder structure is as follows:
 * `model/`: The ABM used for generating the data. Requires Python 3 with [NumPy](https://numpy.org/), [NetworkX](https://networkx.github.io/) and [Editdistance](https://github.com/aflc/editdistance) packages installed.
 
 ## Running the model
-The actual simulation runs reported in the paper were parallelized using the [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) package. I have also created a brief tutorial at the following [NextJournal notebook](https://nextjournal.com).
+The actual simulation runs reported in the paper were parallelized using the [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) package. I have also created a brief tutorial at the following [NextJournal notebook](https://nextjournal.com/winters/cumulative-culture-in-open-ended-problem-spaces/).
 
 Below is a simple version of the model for performing a single run:
 ```python
@@ -27,7 +27,7 @@ If `out=True`, a single simulation will run and output the `.txt` specificed usi
 * `pspace`: This is the probability with which an agent considers movement to problem where its length is the same, longer, or shorter. The default is `pspace=[0.5,0.3,0.2]`: P(Same)=0.5, P(Longer)=0.3, P(Shorter)=0.2.
 
 ## References
-Winters, J. (2019). Escaping optimization traps: The role of cultural adaptation and cultural exaptation in facilitating open-ended cumulative dynamics. *Palgrave Communications*, XXXX.
+Winters, J. (2019). Escaping optimization traps: The role of cultural adaptation and cultural exaptation in facilitating open-ended cumulative dynamics. *Palgrave Communications*, 5: 149.
 
 License
 -------
